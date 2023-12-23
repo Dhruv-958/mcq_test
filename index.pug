@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 MCQ Test
+  form(action='/test', method='post')
+    each question in questions
+        div
+            p #{question.text}
+            if question && question.text && question.options && question.options.length
+                each option, i in question.options
+                    label
+                    input(type='radio', name=`answer${question._id}`, value=i) 
+                    | #{option}
+            else
+                p Error: Invalid question format
+    button(type='submit') Submit
