@@ -46,7 +46,7 @@ app.set('view engine', 'pug');
 
 
 // Routes
-app.get('/', (req,res)=>{
+app.get('/',(req,res)=>{
     try {
         res.render('home.pug')
     } catch (error) {

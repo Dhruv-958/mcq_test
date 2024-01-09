@@ -1,6 +1,29 @@
 extends layout 
 block content 
-    form(action="/", method="post") 
-        input(type="email" name="email" placeholder="Enter Your Email")
-        p#click Click here to start test
-        button Start
+    <div class="home-container center">
+        <div class="home-content center rules" style="padding: 10px;">
+            <!-- <div class="home-img-container center"><img src="../static/480px-Pan_Blue_Circle.png" alt="DSAII Logo"></div> -->
+            <h1>Welcome to the Test!</h1>
+            <h4 style="width: 100%;"><b>Rules:</b></h4>
+            <ul style="width: 100%;" class="rule-scroll">
+                <p style="color: red;">Read the Rules and click on <u><i>Agree</i></u> to continue</p>
+                <div class="agree">
+                    <button class="center" style="margin: 10px;" onclick="start()">Agree</button>
+                </div>
+                <li><b>Rule 1:</b>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis nisi quis corrupti non, quibusdam ipsam. Quam error cupiditate id, quia provident blanditiis, pariatur itaque numquam in debitis, praesentium asperiores non.</li><br>
+                <li><b>Rule 2:</b>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis nisi quis corrupti non, quibusdam ipsam. Quam error cupiditate id, quia provident blanditiis, pariatur itaque numquam in debitis, praesentium asperiores non.</li><br>
+                <li><b>Rule 3:</b>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis nisi quis corrupti non, quibusdam ipsam. Quam error cupiditate id, quia provident blanditiis, pariatur itaque numquam in debitis, praesentium asperiores non.</li><br>
+                <li><b>Rule 4:</b>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis nisi quis corrupti non, quibusdam ipsam. Quam error cupiditate id, quia provident blanditiis, pariatur itaque numquam in debitis, praesentium asperiores non.</li><br>
+                <div class="agree center">
+                    <button class="center" style="margin: 10px;" onclick="start()">Agree</button>
+                </div>
+            </ul>
+        </div>
+        <div class="home-content center">
+            <div class="form-container center">
+                form(action="/", method="post" class="home-form center") 
+                    input(type="email" name="email" placeholder="Enter Your Email" required)
+                    <button id="test-button" style="display: none;">Start</button>
+            </div>
+        </div>
+    </div>
