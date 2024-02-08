@@ -8,7 +8,7 @@ const app = express();
 const port = 3000;
 
 // MongoDB Connection
-mongoose.connect('mongodb://127.0.0.1:27017/mcq_test', { serverSelectionTimeoutMS : 30000 });
+mongoose.connect('mongodb+srv://dhruv:<Dhruv@958>@atlascluster.uv7uq3y.mongodb.net/?retryWrites=true&w=majority', { serverSelectionTimeoutMS : 30000 });
 
 const questionSchema = new mongoose.Schema({
     text: String,
@@ -39,11 +39,9 @@ app.use(session({
     saveUninitialized:true
 }));
 
-
 // Pug setup
 app.set('views', './views');
 app.set('view engine', 'pug');
-
 
 // Routes
 app.get('/',(req,res)=>{
